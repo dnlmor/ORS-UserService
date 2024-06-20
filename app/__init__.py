@@ -5,8 +5,7 @@ from flask_graphql import GraphQLView
 
 def create_app():
     app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    app.config.from_object('config.DevelopmentConfig')
 
     db.init_app(app)
     bcrypt.init_app(app)
