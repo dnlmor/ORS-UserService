@@ -1,4 +1,3 @@
-# app/utils.py
 from passlib.context import CryptContext
 import jwt
 import datetime
